@@ -44,7 +44,7 @@ public class MathService {
     }
 
     private static int obtenerPuerto() {
-        String puerto = System.getenv("PUERTO");
+        String puerto = System.getenv("PORT");
         return (puerto != null) ? Integer.parseInt(puerto) : 4500;
     }
 
