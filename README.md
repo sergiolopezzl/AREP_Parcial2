@@ -35,7 +35,9 @@ mvn exec:java '-Dexec.mainClass=org.example.ServiceProxy'
 
 * Acceda:
   * Local: http://localhost:4567/
+  * Local Docker: http://localhost:38000/
   * AWS: http://ec2-18-234-70-136.compute-1.amazonaws.com:4567/
+  * AWS Docker: http://ec2-18-234-70-136.compute-1.amazonaws.com:38000/
     
 ### Pruebas
 * Prueba Local
@@ -44,7 +46,7 @@ mvn exec:java '-Dexec.mainClass=org.example.ServiceProxy'
 
 * Prueba local con maquinas virtuales Docker 2 servicios 1 web
 
-![dockerlocal.png](src/main/resources/img/dockerlocal.PNG)
+![dockerlocal.png](src/main/resources/img/dockerLocal.PNG)
 
 ![dockerps.png](src/main/resources/img/dockerps.PNG)
 
@@ -53,14 +55,14 @@ mvn exec:java '-Dexec.mainClass=org.example.ServiceProxy'
 ![docker2.png](src/main/resources/img/docker2.PNG)
 
 * Prueba AWS EC2
-* 
+
 ![awsP.png](src/main/resources/img/awsP.PNG)
 
 * Prueba AWS EC2 con maquinas virtuales Docker 2 servicios 1 web
-* 
-![dockeraws.png](src/main/resources/img/dockeraws.PNG)
+
+![dockeraws.png](src/main/resources/img/dockerAws.PNG)
 
 ![aws1.png](src/main/resources/img/aws1.PNG)
 
-![awsdocker.png](src/main/resources/img/awsdocker.PNG)
+![awsdocker.png](src/main/resources/img/awsDocker.PNG)
 
