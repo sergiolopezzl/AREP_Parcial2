@@ -23,12 +23,13 @@ mvn clean package
 * Ejecute el servidor utilizando el siguiente comando: 
 
 ```
-java -cp target/classes org.example.MathService
+mvn exec:java '-Dexec.mainClass=org.example.MathService'
 ```
 * Ejecute el servidor fachada utilizando el siguiente comando:
 ```
-java -cp target/classes org.example.ServiceProxy
+mvn exec:java '-Dexec.mainClass=org.example.ServiceProxy'
 ```
+
 * Debe tener los dos ejecutandose al tiempo
 
 ### Pruebas
