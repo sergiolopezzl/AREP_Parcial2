@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: web
+        ports:
+            - "38000:6000"
+    serviceuno:
+        build:
+            context: .
+            dockerfile: Dockerfile2
+        container_name: serviceuno
+    servicedos:
+        build:
+            context: .
+            dockerfile: Dockerfile2
+        container_name: servicedos
