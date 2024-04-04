@@ -33,7 +33,7 @@ mvn exec:java '-Dexec.mainClass=org.example.ServiceProxy'
 * Para su funcionamiento `round-robin`, `MathService` tiene el puerto *4500* y el `ServiceProxy` tiene 
 *4567*, este necesita el `MathService` para poder calcular lo solicitado. Debe tener los dos ejecutandose al tiempo
 
-* Acceda a Local: http://localhost:4567/
+* Acceda:
   * Local: http://localhost:4567/
   * AWS: http://ec2-18-234-70-136.compute-1.amazonaws.com:4567/
     
