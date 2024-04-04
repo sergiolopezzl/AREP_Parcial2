@@ -31,7 +31,4 @@ java -cp target/classes org.example.ServiceProxy
 ```
 * Debe tener los dos ejecutandose al tiempo
 
-Una vez que el servidor esté en funcionamiento, acceda a 
-http://localhost:35000/cliente desde su navegador para comenzar a escribir comandos.
-
 ### Pruebas
