@@ -20,12 +20,12 @@ cd AREP_Parcial2
 mvn clean package
 ```
 
-* Ejecute el servidor utilizando el siguiente comando: 
+* Ejecute el `MathService` utilizando el siguiente comando: 
 
 ```
 mvn exec:java '-Dexec.mainClass=org.example.MathService'
 ```
-* Ejecute el servidor fachada utilizando el siguiente comando:
+* Ejecute el `ServiceProxy` utilizando el siguiente comando:
 ```
 mvn exec:java '-Dexec.mainClass=org.example.ServiceProxy'
 ```
