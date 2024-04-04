@@ -30,6 +30,37 @@ mvn exec:java '-Dexec.mainClass=org.example.MathService'
 mvn exec:java '-Dexec.mainClass=org.example.ServiceProxy'
 ```
 
-* Debe tener los dos ejecutandose al tiempo
+* Para su funcionamiento `round-robin`, `MathService` tiene el puerto *4500* y el `ServiceProxy` tiene 
+*4567*, este necesita el `MathService` para poder calcular lo solicitado. Debe tener los dos ejecutandose al tiempo
 
+* Acceda a Local: http://localhost:4567/
+  * Local: http://localhost:4567/
+  * AWS: http://ec2-18-234-70-136.compute-1.amazonaws.com:4567/
+    
 ### Pruebas
+* Prueba Local
+
+![localP.png](src/main/resources/img/localP.PNG)
+
+* Prueba local con maquinas virtuales Docker 2 servicios 1 web
+
+![dockerlocal.png](src/main/resources/img/dockerlocal.PNG)
+
+![dockerps.png](src/main/resources/img/dockerps.PNG)
+
+![docker.png](src/main/resources/img/docker.PNG)
+
+![docker2.png](src/main/resources/img/docker2.PNG)
+
+* Prueba AWS EC2
+* 
+![awsP.png](src/main/resources/img/awsP.PNG)
+
+* Prueba AWS EC2 con maquinas virtuales Docker 2 servicios 1 web
+* 
+![dockeraws.png](src/main/resources/img/dockeraws.PNG)
+
+![aws1.png](src/main/resources/img/aws1.PNG)
+
+![awsdocker.png](src/main/resources/img/awsdocker.PNG)
+
