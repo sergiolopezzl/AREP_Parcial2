@@ -11,16 +11,21 @@ import static spark.Spark.*;
 public class ServiceProxy {
 
     public static void main(String[] args) {
+        //44
         staticFiles.location("/public");
         port(getPort());
         get("/linear-search", (req, res) -> {
             res.type("application/json");
-            String output = invoker("http://localhost:4500/linear-search?" + req.queryString());
+            String output = invoker("http://ec2-3-82-11-102.compute-1.amazonaws.com:4500//linear-search?" + req.queryString());
+            //String output = invoker("http://localhost:4500/linear-search?" + req.queryString());
+            
             return output;
         });
         get("/binary-search", (req, res) -> {
             res.type("application/json");
-            String output = invoker("http://localhost:4500/binary-search?" + req.queryString());
+            String output = invoker("http://ec2-18-209-33-177.compute-1.amazonaws.com:4500/binary-search?" + req.queryString());
+            //String output = invoker("http://localhost:4500/binary-search?" + req.queryString());
+            
             return output;
         });
     }

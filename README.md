@@ -20,12 +20,12 @@ cd AREP_Parcial2
 mvn clean package
 ```
 
-* Ejecute el `MathService` utilizando el siguiente comando: 
+* Ejecute el `MathService` utilizando el siguiente comando en las dos instancias EC2: 
 
 ```
 mvn exec:java '-Dexec.mainClass=org.example.MathService'
 ```
-* Ejecute el `ServiceProxy` utilizando el siguiente comando:
+* Ejecute el `ServiceProxy` utilizando el siguiente comando en la ultima instacia que sera el servidor central:
 ```
 mvn exec:java '-Dexec.mainClass=org.example.ServiceProxy'
 ```
@@ -35,14 +35,47 @@ mvn exec:java '-Dexec.mainClass=org.example.ServiceProxy'
 
 * Acceda:
   * Local: http://localhost:4567/
+  * AWS: http://ec2-3-85-40-121.compute-1.amazonaws.com:4567/
+* Con Docker
   * Local Docker: http://localhost:38000/
-  * AWS: http://ec2-18-234-70-136.compute-1.amazonaws.com:4567/
   * AWS Docker: http://ec2-18-234-70-136.compute-1.amazonaws.com:38000/
+
+  
     
-### Pruebas
-* Prueba Local
+## Pruebas
+### Video prueba del funcionamiento `round-robin` en aws con 3 EC2 una el `ServiceProxy` y las otras dos los servicios `MathService`
+
+[![Video](https://img.youtube.com/vi/acmVBZ462HA/sddefault.jpg)](https://www.youtube.com/watch?v=acmVBZ462HA)
+
+
+### Prueba Local
 
 ![localP.png](src/main/resources/img/localP.PNG)
+
+### Prueba AWS EC2
+
+* Podemos ver como se evidencia en el video que cuando un `MathService` de alguna EC2 cae no sirve ese servicio en el `ServiceProxy`
+
+
+![aws2.png](src/main/resources/img/aws2.PNG)
+
+* Aca esta su configuracion
+
+![aws.png](src/main/resources/img/aws.PNG)
+
+![awspagina.png](src/main/resources/img/awspagina.PNG)
+
+
+
+### Pruebas Docker
+
+* Prueba AWS EC2 con maquinas virtuales Docker 2 servicios 1 web
+
+![dockeraws.png](src/main/resources/img/dockerAws.PNG)
+
+![aws1.png](src/main/resources/img/aws1.PNG)
+
+![awsdocker.png](src/main/resources/img/awsDocker.PNG)
 
 * Prueba local con maquinas virtuales Docker 2 servicios 1 web
 
@@ -54,15 +87,4 @@ mvn exec:java '-Dexec.mainClass=org.example.ServiceProxy'
 
 ![docker2.png](src/main/resources/img/docker2.PNG)
 
-* Prueba AWS EC2
-
-![awsP.png](src/main/resources/img/awsP.PNG)
-
-* Prueba AWS EC2 con maquinas virtuales Docker 2 servicios 1 web
-
-![dockeraws.png](src/main/resources/img/dockerAws.PNG)
-
-![aws1.png](src/main/resources/img/aws1.PNG)
-
-![awsdocker.png](src/main/resources/img/awsDocker.PNG)
 
